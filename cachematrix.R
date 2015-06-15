@@ -1,16 +1,26 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Cache matrix for programming assignemnt 2 of R programming course of Coursera
 
-## Write a short comment describing this function
+
+## cacheSolve
 
 makeCacheMatrix <- function(x = matrix()) {
+
+    ## inverse of matrix is found via solve builtin function
     inverse <- solve(x)
+    
+    ## setter of x
     set <- function(y){
         x <<- y
         inverse <<- NULL
     }
+    
+    ## getter of x 
     get <- function() x
+    
+    ##getter of inverse of x
     getInverse <- function() inverse
+    
+    ##setter of inverse of x
     setInverse <- function(){
         inverse <<- solve(x)
     }
